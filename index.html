@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>BookshelfAPP</title>
+</head>
+<body>
+  <header>
+    <span class="logo">Bookshelf app</span>
+  </header>
+  <main>
+    <div class="container">
+      <section class="left-bar" id="input-section">
+        <h2>Tambahkan Buku</h2>
+        <form action="" id="input-book">
+          <label for="title">Judul</label>
+          <div class="input-title">
+            <input type="text" class="form-control" id="title" placeholder="Masukan judul buku" required>
+          </div>
+          <label for="author-name">Pengarang</label>
+          <div class="input-author">
+            <input type="text" class="form-control" id="author" placeholder="Masukan pengarang" required>
+          </div>
+          <label for="datebook">Tahun</label>
+          <div class="input-date">
+            <input type="number" class="form-control" id="year" placeholder="Tahun" required>
+          </div>
+          <div class="input-checkbox">
+            <label for="">Telah selesai dibaca</label>
+            <input type="checkbox" id="check">
+          </div>
+          <button id="book-submit" type="submit">Masukan</button>
+        </form>
+      </section>
+      <section class="right-bar">
+        <h2>Cari Buku (Opsional)</h2>
+        <label for="title">Judul</label>
+        <div class="search">
+          <input type="text" class="form-control" name="" id="search-title" placeholder="Cari Buku/Pengarang">
+          <button type="submit" id="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z"/>
+              <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zm-3.847-8.699a2 2 0 1 0 2.646 2.646 4 4 0 1 1-2.646-2.646z"/>
+            </svg>
+          </button>
+          <div id="search-result"></div>
+        </div>
+        <div class="bookContainer"">
+          <h4>Belum selesai dibaca</h4>
+          <div class="bookList" id="incompleted-bookList"></div>
+        </div>
+        <div class="bookContainer">
+          <h4>Sudah selesai dibaca</h4>
+          <div class="bookList" id="completed-bookList"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
